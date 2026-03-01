@@ -9,28 +9,6 @@
 
 <div class="grid cards" markdown>
 
--   __Laboratório de Desenvolvimento Web (LDW)__
-
-    ---
-    Aprenda sobre desenvolvimento web moderno com Python, Flask e integrações.
-
-    [:arrow_right: Acessar Material](LDW/01_Introducao/01_Introducao.md)
-
--   __Aprendizagem de Máquina (AM)__
-
-    ---
-    Aprenda sobre aprendizado de máquina com Python, FastAPI e integrações.
-
-    [:arrow_right: Acessar Material](AM/01_Introducao/01_Teoria.md)
-
--   __Laboratório de Desenvolvimento Mobile (LDDM)__
-
-    ---
-    Desenvolvimento multiplataforma com Kotlin, Compose e Supabase.
-
-    [:arrow_right: Acessar Material](LDDM/01_Introducao/01_Introducao.md)
-
-
 -   __Banco de Dados 2 (BD2)__
 
     ---
