@@ -8,10 +8,6 @@
 
 Bem-vindo à disciplina de **Banco de Dados 2**. Aqui exploraremos conceitos avançados de modelagem, automação e otimização de sistemas de banco de dados utilizando **MySQL**.
 
-## Nosso Projeto
-
-Utilizaremos como fio condutor o desenvolvimento de um banco de dados para uma **Plataforma de Aprendizado de Programação** (estilo gamificado). O objetivo é que você veja o propósito real de cada comando enquanto constrói um sistema completo.
-
 ## O que vamos aprender
 
 Nossa carga horária de 80h está dividida em quatro grandes etapas:
