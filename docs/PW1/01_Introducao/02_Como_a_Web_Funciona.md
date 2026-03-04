@@ -36,6 +36,28 @@ Acompanhe a demonstração do professor, que mostrará exatamente o ciclo de vid
 
 ---
 
+## Teste seus conhecimentos
+
+> Vamos revisar e fixar os conceitos discutidos sobre a navegação na Web!
+
+<quiz>
+No contexto da internet, o que é o "Cliente" e o que é o "Servidor"?
+- [ ] O Servidor é quem envia o pedido, e o Cliente é supercomputador que armazena todos os arquivos da web.
+- [ ] Ambos são programas de celular. O Cliente é o WhatsApp e o Servidor é o Google Chrome.
+- [x] O Cliente é o seu computador (ou celular) com o navegador, e o Servidor é o supercomputador conectado à internet que possui os arquivos e entrega quando você pede.
+</quiz>
+
+<quiz>
+Para que serve o DNS (Domain Name System)?
+- [x] O DNS funciona como uma lista telefônica, traduzindo o nome de um site para localizar o endereço (número de IP) correspondente.
+- [ ] O DNS é um protocolo usado unicamente para transmitir vídeos e músicas sem pausar o tempo todo.
+- [ ] O DNS diz ao Servidor de qual computador físico a solicitação de envio saiu a fim de bloquear ameaças.
+</quiz>
+
+<!-- mkdocs-quiz results -->
+
+---
+
 ## Exercícios de Fixação
 
 Chegou o momento de colocar a mão na massa e confirmar o que aprendemos estruturando o caminho e infraestrutura que compõem a Web.
