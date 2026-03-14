@@ -75,23 +75,6 @@ RENAME COLUMN telefone TO celular;
 
 ---
 
-## Desafio Extra (incremento)
-
-Crie uma tabela `emprestimos` com os campos:
-
-- `id_emprestimo` (PK)
-- `id_livro` (INT)
-- `id_aluno` (INT)
-- `data_emprestimo` (DATE)
-- `data_devolucao` (DATE)
-
-Depois, faça duas alterações:
-
-1. Adicione a coluna `status` (`VARCHAR(20)`) com valor padrão `'aberto'`.
-2. Altere o tamanho de `status` para `VARCHAR(30)`.
-
----
-
 ## Checklist de Entrega
 
 - [ ] Script SQL com todos os comandos usados.
