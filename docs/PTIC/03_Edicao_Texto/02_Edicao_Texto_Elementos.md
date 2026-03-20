@@ -141,9 +141,9 @@ Para que serve a quebra de página?
 ??? example "Atividade prática: Mini relatório com elementos"
     Você vai criar um documento com tabela, imagem e quebra de página.
 
-    1. Crie o arquivo `Exercicio_Aula07_NomeSobrenome`.
+    1. Crie o arquivo `Exercicio_Aula06_NomeSobrenome`.
     2. Escreva um título e 1 parágrafo de introdução.
-    3. Insira uma tabela 5 x 3 com:
+    3. Insira uma tabela 3 x 5 com:
        - Coluna 1: Dia.
        - Coluna 2: Atividade.
        - Coluna 3: Tempo.
