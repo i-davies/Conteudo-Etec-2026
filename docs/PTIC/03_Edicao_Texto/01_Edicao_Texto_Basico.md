@@ -143,7 +143,7 @@ Sobre o uso de cores no texto, qual alternativa está correta?
 ??? example "Atividade prática: Texto bem apresentado"
     Você vai entregar um mini texto com formatação correta.
 
-    1. Crie um arquivo chamado `Exercicio_Aula06_NomeSobrenome`.
+    1. Crie um arquivo chamado `Exercicio_Aula05_NomeSobrenome`.
     2. Escreva um título: `Como eu organizo meus estudos`.
     3. Escreva 3 parágrafos curtos (3 a 4 linhas cada).
     4. Aplique no título:
