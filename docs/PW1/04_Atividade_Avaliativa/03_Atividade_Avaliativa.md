@@ -46,7 +46,7 @@ Integrar os conteúdos estudados em PW1 até este momento em um mini projeto com
 
 ## Entrega
 
-- Pasta com nome `AT1_1B_T1_nome_sobrenome`.
+- Pasta com nome `AT1_PW1_1B_T1_nome_sobrenome`.
 - Entregar a pasta com os arquivos HTML e imagens utilizadas.
 - A entrega deve ser feita por Google Drive, com compartilhamento configurado como leitor.
 - Os arquivos devem abrir corretamente no navegador.
