@@ -55,18 +55,18 @@ Você deve criar o banco `lab_escola` com no mínimo as tabelas:
 ## Modelo Base Sugerido (pode adaptar)
 
 ### Tabela `usuarios`
-- `id_usuario` INT (PK, auto incremento)
+- `id_usuario` INT (PK, auto-incremento)
 - `nome` VARCHAR(100) NOT NULL
 - `email` VARCHAR(120) UNIQUE
 - `perfil` VARCHAR(20) DEFAULT 'aluno'
 
 ### Tabela `trilhas`
-- `id_trilha` INT (PK, auto incremento)
+- `id_trilha` INT (PK, auto-incremento)
 - `nome_trilha` VARCHAR(80) NOT NULL
 - `descricao` VARCHAR(200)
 
 ### Tabela `desafios`
-- `id_desafio` INT (PK, auto incremento)
+- `id_desafio` INT (PK, auto-incremento)
 - `titulo` VARCHAR(100) NOT NULL
 - `nivel` VARCHAR(20) DEFAULT 'basico'
 - `id_trilha` INT (FK opcional)
@@ -79,6 +79,7 @@ Enviar:
 
 - script `atividade_bd2_nome_sobrenome.sql`;
 - captura da estrutura final das tabelas no HeidiSQL (ou equivalente);
+
 ---
 
 ## Critérios de Correção

@@ -6,46 +6,52 @@
 
 ## Tema da Atividade
 
-Mini Projeto 1: criar um curriculo ou uma pagina biografica em HTML.
+Criar um mini projeto em HTML com 2 páginas sobre uma personalidade ou personagem.
 
 ## Objetivo
 
-Integrar os conteudos estudados em uma unica pagina bem estruturada.
+Integrar os conteúdos estudados em PW1 até este momento em um mini projeto com estrutura, organização visual e navegação entre páginas.
 
-## Requisitos obrigatorios
+## Requisitos obrigatórios
 
-- Organizacao da pagina com blocos usando `div`.
-- Titulo principal e no minimo tres secoes de conteudo.
-- Uso de pelo menos uma imagem com `alt`.
-- Uso de uma tabela simples com informacoes relevantes.
-- Navegacao minima com ao menos um link interno ou externo.
+- Criar 2 páginas HTML:
+	- uma página inicial com biografia de uma personalidade ou personagem;
+	- uma página de galeria de fotos sobre essa mesma pessoa ou personagem.
+- A página biográfica deve conter, no mínimo:
+	- 1 `h1`;
+	- 2 `h2`;
+	- parágrafos com informações organizadas;
+	- links funcionais;
+	- imagens com atributo `alt`;
+	- uso de `div` para separar os blocos de conteúdo.
+- A página de galeria deve conter, no mínimo:
+	- título da página;
+	- ao menos 2 elementos `figure` com `figcaption`;
+	- imagens com atributo `alt`;
+	- legendas das imagens;
+	- organização do conteúdo com `div`.
+- O projeto deve conter os seguintes links:
+	- link para acessar a galeria de fotos;
+	- link para voltar ao topo;
+	- link para voltar à página inicial.
+- O conteúdo deve utilizar corretamente os elementos estudados em PW1 até agora.
 
-## Opcoes de Tema
+## Critérios de Correção
 
-- Curriculo pessoal.
-- Pagina biografica de uma personalidade.
-
-## Criterios de Correcao
-
-- 4,0 pts: estrutura HTML e organizacao com `div`.
-- 2,0 pts: uso correto de imagens e acessibilidade (`alt`).
-- 2,0 pts: tabela funcional e organizada.
-- 2,0 pts: organizacao visual, legibilidade e cumprimento da proposta.
+- 3,0 pts: estrutura correta das 2 páginas HTML.
+- 2,0 pts: uso adequado de tags estudadas (`h1`, `h2`, `p`, `a`, `img`, `figure`, `div`).
+- 2,0 pts: navegação funcionando corretamente entre galeria, topo e página inicial.
+- 2,0 pts: uso correto de imagens com `alt` e conteúdo coerente com o tema escolhido.
+- 1,0 pt: organização, capricho e legibilidade do código.
 
 ## Entrega
 
-- Arquivo `mini_projeto1_nome_sobrenome.html`.
-- Arquivo deve abrir corretamente no navegador.
+- Pasta com nome `AT1_1B_T1_nome_sobrenome`.
+- Entregar a pasta com os arquivos HTML e imagens utilizadas.
+- A entrega deve ser feita por Google Drive, com compartilhamento configurado como leitor.
+- Os arquivos devem abrir corretamente no navegador.
 
-## Observacao
+## Observação
 
-Mantenha o codigo organizado e com identacao correta.
-Paginas sem organizacao em blocos ou sem tabela nao atendem aos requisitos minimos.
-
-## Checklist
-
-- [ ] Tema definido (curriculo ou biografia).
-- [ ] Estrutura com blocos `div` aplicada.
-- [ ] Imagem com `alt` inserida.
-- [ ] Tabela simples criada.
-- [ ] Arquivo entregue com nome correto.
+Mantenha o código organizado e com indentação adequada.
+Projetos sem as 2 páginas solicitadas, sem links de navegação ou sem uso dos elementos estudados não atendem aos requisitos mínimos.
