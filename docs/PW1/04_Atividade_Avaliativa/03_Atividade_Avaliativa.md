@@ -6,11 +6,11 @@
 
 ## Tema da Atividade
 
-Criar um mini projeto em HTML com 2 páginas sobre uma personalidade ou personagem.
+Criar um projeto em HTML com 2 páginas sobre uma personalidade ou personagem.
 
 ## Objetivo
 
-Integrar os conteúdos estudados em PW1 até este momento em um mini projeto com estrutura, organização visual e navegação entre páginas.
+Integrar os conteúdos estudados em PW1 até este momento em um projeto com estrutura, organização visual e navegação entre páginas.
 
 ## Requisitos obrigatórios
 

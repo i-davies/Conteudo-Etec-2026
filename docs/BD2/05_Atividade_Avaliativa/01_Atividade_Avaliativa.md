@@ -36,23 +36,23 @@ Você deve criar o banco `lab_escola` com no mínimo as tabelas:
 **Tabela `usuarios`**
 
 - id_usuario
-- nome
-- email
-- data_cadastro
+- nome (ex.: Ana Souza)
+- email (ex.: ana@email.com)
+- data_cadastro (ex.: data em que o usuario foi registrado)
 
 **Tabela `trilhas`**
 
 - id_trilha
-- nome
-- descricao
-- nivel
+- nome (ex.: Banco de Dados, Python Basico, Web)
+- descricao (ex.: trilha com atividades sobre SQL e modelagem)
+- nivel (decidir entre: ex.: iniciante, intermediario, avancado ou 1, 2, 3)
 
 **Tabela `desafios`**
 
 - id_desafio
-- titulo
-- descricao
-- pontos
+- titulo (ex.: Criar tabela usuarios)
+- descricao (ex.: desenvolver o desafio proposto pela trilha)
+- pontos (ex.: 10, 20, 50)
 
 > Você deve definir os tipos de dados e decidir quais campos terão `PRIMARY KEY`, `AUTO_INCREMENT`, `NOT NULL`, `UNIQUE` e `DEFAULT`.
 

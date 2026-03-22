@@ -10,7 +10,7 @@
 
 ## Objetivo
 
-Aplicar os conteúdos estudados em PW3 até aqui em um mini projeto com foco em método GET, e POST, organização de API em PHP e fluxo de versionamento com Git.
+Aplicar os conteúdos estudados em PW3 até aqui em um projeto com foco em método GET, e POST, organização de API em PHP e fluxo de versionamento com Git.
 
 ## Requisitos obrigatórios
 

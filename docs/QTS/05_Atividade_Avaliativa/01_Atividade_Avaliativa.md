@@ -61,9 +61,5 @@ Crie **duas funções**:
 - 2,0 pts: regras implementadas de forma coerente com o tema.
 - 3,0 pts: qualidade e cobertura dos testes (`mínimo 5`), incluindo falhas esperadas.
 - 1,5 pts: identificação e correção de defeito no código.
-- 1,5 pts: uso correto de Git (branch, commits e merge).
+- 1,5 pts: uso correto de Git (branch e commits).
 
-## Observação
-
-- No dia da atividade, os alunos não terão acesso à internet.
-- O professor pode disponibilizar um pacote inicial offline com cache do UV para instalação local do `pytest`.
