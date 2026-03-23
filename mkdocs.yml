@@ -66,7 +66,3 @@ plugins:
       shuffle_answers: true
 
 exclude_docs: |
-  PW1/04_Atividade_Avaliativa/**
-  BD2/05_Atividade_Avaliativa/**
-  PW3/04_Atividade_Avaliativa/**
-  QTS/05_Atividade_Avaliativa/**

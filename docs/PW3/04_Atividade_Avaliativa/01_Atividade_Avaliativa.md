@@ -4,83 +4,97 @@
 
 ---
 
-## Tema da atividade
+## Tema da Atividade
 
-Mini projeto integrador: Git + HTTP com PHP + retorno em JSON + consumo com Fetch.
-
----
+**Agenda de Eventos da ETEC** com API em PHP e retorno em JSON.
 
 ## Objetivo
 
-Aplicar os conteudos estudados ate aqui em PW3 em um unico projeto funcional.
+Aplicar os conteúdos estudados em PW3 até aqui em um projeto com foco em método GET, e POST, organização de API em PHP e fluxo de versionamento com Git.
 
----
+## Requisitos obrigatórios
 
-## Cenario
+- Tema obrigatório do projeto:
+   - **Agenda de Eventos da ETEC**
+- Criar um `index.php` contendo:
+      - 1 link para executar/consultar o endpoint de **GET**;
+      - 1 formulário para envio ao endpoint de **POST** com os campos `titulo`, `data` e `local`.
+- Na branch `main` (ou `master`), implementar o endpoint de **GET** com PHP retornando JSON do tema.
+- Criar a branch `feature/post-evento` para implementar somente o endpoint de **POST**.
+- Realizar commits com mensagens claras nas duas etapas (main/master e feature).
+- O retorno JSON deve seguir exatamente os modelos abaixo.
 
-Voce deve montar um mini sistema com duas partes:
+### Modelo JSON obrigatório - GET
 
-- uma API simples em PHP retornando JSON;
-- uma pagina com JavaScript usando `fetch()` para consumir essa API.
+```json
+{
+   "status": "sucesso",
+   "metodo": "GET",
+   "tema": "Agenda de Eventos da ETEC",
+   "dados": {
+      "turma": "3DS",
+      "periodo": "Diurno",
+      "eventos": [
+         {
+            "id": 1,
+            "titulo": "Feira Tecnológica",
+            "data": "2026-04-10",
+            "local": "Patio Principal"
+         },
+         {
+            "id": 2,
+            "titulo": "Semana da Programação",
+            "data": "2026-05-18",
+            "local": "Laboratório 2"
+         },
+         {
+            "id": 3,
+            "titulo": "Mostra de TCC",
+            "data": "2026-06-22",
+            "local": "Auditório"
+         }
+      ]
+   }
+}
+```
 
----
+### Modelo JSON obrigatório - POST
 
-## Requisitos obrigatorios
-
-1. Criar projeto na pasta:
-   - `PW3/04_aula/atividade_avaliativa_nome_sobrenome`
-2. Criar `api_turma.php` retornando JSON valido com:
-   - nome da turma,
-   - periodo,
-   - ao menos 3 disciplinas.
-3. Definir header `Content-Type: application/json`.
-4. Criar `index.php` com interface para exibir os dados da API.
-   - usar estrutura HTML completa (padrao base tipo `!` do Emmet);
-   - usar `<?php ... ?>` apenas nos trechos que realmente precisarem de PHP.
-5. Criar `app.js` usando `fetch()` para consumir `api_turma.php`.
-6. Exibir os dados no HTML (nao somente no console).
-7. Tratar erro de requisicao com mensagem ao usuario.
-8. Fluxo de Git obrigatorio:
-   - criar branch `feature/api-fetch`;
-   - realizar pelo menos 3 commits com mensagens claras;
-   - fazer merge na `main`.
----
-
-## Requisitos opcionais (bonus)
-
-- Adicionar filtro por parametro na API (`?disciplina=...`).
-- Exibir status HTTP na tela.
-- Melhorar visual com CSS.
+```json
+{
+   "status": "sucesso",
+   "metodo": "POST",
+   "tema": "Agenda de Eventos da ETEC",
+   "mensagem": "Evento cadastrado com sucesso.",
+   "evento": {
+      "id": 4,
+      "titulo": "Nome do evento recebido",
+      "data": "data recebida",
+      "local": "Local recebido"
+   }
+}
+```
 
 ---
 
 ## Entrega
 
-Entregar:
-
-- pasta do projeto com `index.php`, `api_turma.php`, `app.js` e opcionais;
-- historico Git com branch, commits e merge;
-- Link do repositório no GitHub.
-
----
-
-## Criterios de correcao
-
-- 3,0 pts: API PHP em JSON funcionando corretamente.
-- 3,0 pts: consumo com `fetch()` e exibição em tela.
-- 2,0 pts: tratamento de erro e organização do código.
-- 2,0 pts: uso correto de Git (branch + commits + merge).
-
-Bonus ate +1,0:
-
-- implementacao de itens opcionais com qualidade.
+- Pasta do projeto com os arquivos PHP do GET e do POST.
+- Histórico Git com branch, commits e merge conforme solicitado.
+- Dentro do link da disciplina no Google Classroom, localizar a atividade para envio: 
+      - [Link da atividade](https://classroom.google.com/c/Nzk2Nzk3MTczNTkz?cjc=7hmikw5f)
+- Na entrega, informar o nome completo.
+- Na entrega, incluir o link do repositório no GitHub.
 
 ---
 
-## Checklist de entrega
+## Critérios de Correção
 
-- [ ] API PHP retorna JSON valido.
-- [ ] `index.php` e `app.js` funcionam no Laragon.
-- [ ] Dados da API aparecem na tela.
-- [ ] Erros sao tratados com mensagem.
-- [ ] Fluxo de Git concluído.
+- 3,0 pts: endpoint GET funcionando na main/master com retorno JSON no formato solicitado.
+- 3,0 pts: endpoint POST funcionando na branch feature com retorno JSON no formato solicitado.
+- 2,0 pts: organização e clareza do código PHP.
+- 2,0 pts: uso correto de Git (branch, commits e merge).
+
+## Observação
+
+O aluno deve manter exatamente as chaves e a estrutura dos JSONs obrigatórios de GET e POST apresentados nesta atividade.

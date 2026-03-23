@@ -1,4 +1,4 @@
-# Atividade Avaliativa em Sala
+﻿# Atividade Avaliativa em Sala
 
 > Esta atividade vale nota e deve ser feita em sala de aula.
 
@@ -12,7 +12,7 @@ Criação de banco de dados com tabelas, chave primária e constraints básicas.
 
 ## Objetivo
 
-Criar uma estrutura de banco de dados simples, porém correta, aplicando os conceitos estudados até esta etapa.
+Criar uma estrutura de banco de dados simples, aplicando os conceitos estudados até esta etapa.
 
 Você pode modelar via:
 
@@ -26,84 +26,66 @@ Você pode modelar via:
 Sistema de trilhas da escola para registrar usuários e desafios.
 
 Você deve criar o banco `lab_escola` com no mínimo as tabelas:
+
 - `usuarios`
 - `trilhas`
 - `desafios`
+
+### Estrutura obrigatória das tabelas
+
+**Tabela `usuarios`**
+
+- id_usuario
+- nome (ex.: Ana Souza)
+- email (ex.: ana@email.com)
+- data_cadastro (ex.: data em que o usuario foi registrado)
+
+**Tabela `trilhas`**
+
+- id_trilha
+- nome (ex.: Banco de Dados, Python Basico, Web)
+- descricao (ex.: trilha com atividades sobre SQL e modelagem)
+- nivel (decidir entre: ex.: iniciante, intermediario, avancado ou 1, 2, 3)
+
+**Tabela `desafios`**
+
+- id_desafio
+- titulo (ex.: Criar tabela usuarios)
+- descricao (ex.: desenvolver o desafio proposto pela trilha)
+- pontos (ex.: 10, 20, 50)
+
+> Você deve definir os tipos de dados e decidir quais campos terão `PRIMARY KEY`, `AUTO_INCREMENT`, `NOT NULL`, `UNIQUE` e `DEFAULT`.
 
 ---
 
 ## Requisitos obrigatórios
 
 1. Criar o banco com `CREATE DATABASE` e selecionar com `USE`.
-2. Criar as 3 tabelas com tipos de dados adequados.
-3. Cada tabela deve possuir `PRIMARY KEY`.
+2. Criar as 3 tabelas com os campos mínimos informados no cenário.
+3. Definir os tipos de dados e constraints de forma coerente com a modelagem proposta.
 4. Usar pelo menos:
-- 2 campos `NOT NULL` no total,
-- 1 campo `UNIQUE` no total,
-- 1 campo com `DEFAULT` no total.
+    - 2 campos `NOT NULL` no total,
+    - 1 campo `UNIQUE` no total,
+    - 1 campo com `DEFAULT` no total.
 5. Entregar o script SQL em arquivo `.sql`.
-
----
-
-## Requisitos opcionais (bônus)
-
-- Criar relacionamento com `FOREIGN KEY` (por exemplo, `desafios` ligados a `trilhas`).
-- Inserir alguns registros de teste para validar a estrutura.
-
----
-
-## Modelo Base Sugerido (pode adaptar)
-
-### Tabela `usuarios`
-- `id_usuario` INT (PK, auto incremento)
-- `nome` VARCHAR(100) NOT NULL
-- `email` VARCHAR(120) UNIQUE
-- `perfil` VARCHAR(20) DEFAULT 'aluno'
-
-### Tabela `trilhas`
-- `id_trilha` INT (PK, auto incremento)
-- `nome_trilha` VARCHAR(80) NOT NULL
-- `descricao` VARCHAR(200)
-
-### Tabela `desafios`
-- `id_desafio` INT (PK, auto incremento)
-- `titulo` VARCHAR(100) NOT NULL
-- `nivel` VARCHAR(20) DEFAULT 'basico'
-- `id_trilha` INT (FK opcional)
 
 ---
 
 ## Entrega
 
-Enviar:
-
-- script `atividade_bd2_nome_sobrenome.sql`;
-- captura da estrutura final das tabelas no HeidiSQL (ou equivalente);
+- Arquivo nomeado como `AT1_BD2_2B_T1_nome_sobrenome.sql`.
+- Captura de tela da estrutura final das tabelas no HeidiSQL.
 ---
 
 ## Critérios de Correção
 
 - 4,0 pts: criação correta do banco e das tabelas.
-- 3,0 pts: uso correto de constraints (`NOT NULL`, `UNIQUE`, `DEFAULT`, `PRIMARY KEY`).
+- 3,0 pts: uso correto de constraints (`NOT NULL`, `UNIQUE`, `DEFAULT` e `PRIMARY KEY`).
 - 2,0 pts: organização e legibilidade do script SQL.
 - 1,0 pt: validação final (estrutura confere com o solicitado).
 
-Bônus até +1,0:
-- uso correto de `FOREIGN KEY`.
-
 ---
 
-## Observação Importante
+## Observação
 
 Mesmo que a criação seja feita pela interface gráfica, a entrega oficial será o **script SQL** gerado/exportado.
-Isso aproxima a atividade do formato da prova prática.
-
----
-
-## Checklist de Entrega
-
-- [ ] Banco criado com `CREATE DATABASE` e `USE`.
-- [ ] Três tabelas criadas com tipos corretos.
-- [ ] Chave primária aplicada em todas as tabelas.
-- [ ] Uso de `NOT NULL`, `UNIQUE` e `DEFAULT`.
-- [ ] Arquivo `.sql` entregue com nome correto.

@@ -4,102 +4,62 @@
 
 ---
 
-## Tema da atividade
+## Tema da Atividade
 
-Mini projeto integrador: Git + Python + erros e falhas + testes com `pytest`.
-
----
+Mini sistema de validação de pedidos de uma cantina escolar (QTS + Git + testes com `pytest`).
 
 ## Objetivo
 
-Aplicar os conteúdos estudados até aqui em QTS em um único projeto simples, organizado e funcional.
+Aplicar os conteúdos estudados em QTS em um projeto mais autônomo, com implementação, testes, identificação de defeitos e fluxo de versionamento com Git.
 
----
+## Escopo do Sistema
 
-## Cenário
+O sistema deve simular o processamento de pedidos de uma cantina escolar.
 
-Você deve montar um pequeno projeto Python que simule a validação de notas de um aluno.
+Crie **duas funções**:
 
-O projeto precisa:
+**`calcular_total(quantidade, valor_unitario)`**
 
-- ter funções em Python;
-- conter ao menos um defeito corrigido durante a atividade;
-- possuir testes automatizados com `pytest`;
-- registrar o processo com Git.
+- Recebe a quantidade e o valor unitário de um item;
+- Retorna o total multiplicando os dois valores.
 
----
+**`validar_pedido(item, quantidade, valor_unitario)`**
+
+- Recebe os três campos do pedido;
+- Retorna `"Pedido válido"` se:
+    - `item` não for vazio;
+    - `quantidade` for maior que zero;
+    - `valor_unitario` for maior que zero;
+- Retorna `"Pedido inválido"` em qualquer outro caso.
 
 ## Requisitos obrigatórios
 
-1. Criar o projeto na pasta:
-   - `QTS/05_aula/atividade_avaliativa_nome_sobrenome`
-2. Criar o arquivo `boletim.py` com pelo menos estas funções:
-   - `calcular_media(n1, n2)`
-   - `verificar_aprovacao(media)`
-3. Regra esperada:
-   - média maior ou igual a `6` retorna `"Aprovado"`;
-   - média menor que `6` retorna `"Reprovado"`.
-4. Criar o arquivo `test_boletim.py` com pelo menos 3 testes:
-   - teste da média correta;
-   - teste de aluno aprovado;
-   - teste de aluno reprovado.
-5. Executar os testes com `uv run pytest`.
-6. Fluxo de Git obrigatório:
-   - iniciar repositório ou usar repositório já criado;
-   - criar branch `feature/testes-boletim`;
-   - realizar pelo menos 3 commits com mensagens claras;
-   - finalizar com merge na `main`.
-7. Entregar o projeto com os arquivos principais e histórico Git funcionando.
-
----
-
-## Requisitos opcionais (bônus)
-
-- Criar uma função extra `situacao_final(n1, n2, faltas)`.
-- Adicionar teste para entrada inválida.
-- Criar `README.md` curto explicando como executar o projeto.
-
----
-
-## Sugestão de estrutura
-
-```text
-QTS/05_aula/atividade_avaliativa_nome_sobrenome/
-  boletim.py
-  test_boletim.py
-  README.md
-```
-
----
+- Iniciar o projeto com UV e adicionar o Pytest como dependência.
+- Criar 2 arquivos Python:
+      - 1 arquivo de implementação com as duas funções do escopo;
+      - 1 arquivo de testes.
+- Os testes devem usar `assert` para verificar o comportamento de `calcular_total` e `validar_pedido`.
+- Criar no mínimo 5 testes automatizados com `pytest`.
+- Distribuição obrigatória dos testes por branch:
+  - parte dos testes deve ser criada na `main` (ou `master`);
+  - parte dos testes deve ser criada na branch `feature`.
+- Incluir ao menos 1 teste com valor errado propositalmente para observar a falha no `pytest` (sem usar decorator de exceção).
+- Fluxo de Git obrigatório:
+  - criar branch `feature/testes-cantina`;
 
 ## Entrega
 
-Entregar:
-
-- pasta do projeto com os arquivos Python;
-- testes executando corretamente;
-- histórico Git com branch, commits e merge;
-- link do repositório, se a turma estiver usando GitHub.
+- Dentro do link da disciplina no Google Classroom, localizar a atividade para registro da entrega:
+  - [Link da atividade](https://classroom.google.com/c/Nzk2Nzk3ODkwNzE4?cjc=h33cnw4d)
+- Na entrega, informar o nome completo e anexar o link do repositório, quando solicitado.
 
 ---
 
-## Critérios de correção
+## Critérios de Correção
 
-- 3,0 pts: funções Python implementadas corretamente.
-- 3,0 pts: testes com `pytest` cobrindo os cenários obrigatórios.
-- 2,0 pts: identificação e correção de defeito no código.
-- 2,0 pts: uso correto de Git no fluxo solicitado.
+- 2,0 pts: organização do projeto e inicialização correta com UV.
+- 2,0 pts: regras implementadas de forma coerente com o tema.
+- 3,0 pts: qualidade e cobertura dos testes (`mínimo 5`), incluindo falhas esperadas.
+- 1,5 pts: identificação e correção de defeito no código.
+- 1,5 pts: uso correto de Git (branch e commits).
 
-Bônus até +1,0:
-
-- implementação de itens opcionais com qualidade.
-
----
-
-## Checklist de entrega
-
-- [ ] Projeto criado na pasta correta.
-- [ ] `boletim.py` implementado.
-- [ ] `test_boletim.py` criado com pelo menos 3 testes.
-- [ ] Testes executados com sucesso.
-- [ ] Branch, commits e merge realizados.
