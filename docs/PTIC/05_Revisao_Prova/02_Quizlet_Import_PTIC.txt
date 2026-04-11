@@ -1,0 +1,26 @@
+Qual é a função principal de um Sistema Operacional?	Gerenciar o hardware e permitir que os programas funcionem.Criar automaticamente documentos de texto no computador.Substituir a internet para abrir sites offline.Funcionar apenas como antivírus do sistema.
+No contexto das aulas, qual sistema operacional foi definido como principal ambiente de trabalho?	Windows.Linux Mint.Ubuntu Server.ChromeOS.
+Qual atalho abre o Explorador de Arquivos no Windows?	Win + E.Alt + Tab.Ctrl + Shift + E.Win + R.
+Qual atalho alterna entre janelas abertas?	Alt + Tab.Win + D.Ctrl + C.F2.
+O comando Ctrl + Z é usado para:	Desfazer a última ação.Fechar o programa atual.Salvar uma cópia de segurança na nuvem.Bloquear o teclado temporariamente.
+A tecla F2 no Explorador de Arquivos serve para:	Renomear o arquivo ou pasta selecionado.Excluir permanentemente um arquivo.Abrir propriedades avançadas de rede.Compactar arquivos em .zip.
+Qual alternativa descreve corretamente um arquivo?	Uma unidade de informação com extensão que indica seu formato.Um conjunto de pastas dentro de outra pasta.Um atalho obrigatório para abrir a internet.Um tipo de memória RAM temporária.
+Pastas (diretórios) são usadas principalmente para:	Organizar arquivos e outras pastas.Converter arquivos .txt em .pdf automaticamente.Executar programas sem sistema operacional.Substituir o uso de backups.
+Em um caminho como C:\Usuarios\Aluno\Documentos\Aula_01.txt, o trecho Aula_01.txt representa:	O arquivo final de destino.A raiz do disco.Um conjunto de subpastas.Um servidor remoto.
+Qual extensão é mais associada a arquivos de documentação em Markdown?	.md..doc..ppt..exe.
+Armazenamento em nuvem significa que os arquivos:	São guardados em servidores conectados à internet.Só podem ser acessados em computadores da escola.Ficam salvos apenas na memória RAM do dispositivo.Deixam de precisar de nome e extensão.
+Uma grande vantagem da nuvem para estudantes é:	Acessar os mesmos arquivos em diferentes dispositivos.Eliminar totalmente a necessidade de internet.Tornar obrigatório o uso de Linux.Impedir qualquer tipo de compartilhamento.
+No conteúdo de PTIC, Google Drive está vinculado principalmente a:	Contas Google (como Gmail).Contas de banco digital.Contas do GitHub apenas.Contas de jogos online.
+No contexto estudado, OneDrive está mais integrado a:	Microsoft 365 e Windows.Blender e Unity.Android Studio exclusivamente.Servidores Linux sem interface.
+Ao compartilhar um arquivo na nuvem, o mais comum é enviar:	Um link de acesso com permissão definida.O HD físico por correio.Apenas uma captura de tela do arquivo.O arquivo sem nome e sem extensão.
+Qual permissão deve ser evitada quando não há necessidade de alteração por terceiros?	Editor para qualquer pessoa com o link.Somente leitura.Comentador.Visualizador restrito.
+Sincronização é melhor definida como:	Manter o mesmo arquivo atualizado em mais de um local.Exclusão automática de arquivos antigos.Criptografia obrigatória de todos os documentos.Transformação de PDF em DOCX.
+Backup é:	Uma cópia de segurança para recuperação em caso de problema.O mesmo conceito de sincronização, sem diferença.Um atalho para abrir o navegador.Um recurso exclusivo de pendrive.
+Se um arquivo foi apagado por engano no Drive, um primeiro local para tentar recuperar é:	Lixeira do próprio serviço de nuvem.Painel de controle do Windows.Pasta Downloads local.BIOS da máquina.
+Quando um texto foi alterado incorretamente, qual recurso pode ajudar a voltar a uma versão anterior?	Histórico de versões.Modo avião.Firewall do roteador.Gerenciador de tarefas.
+Na edição de texto, antes de formatar, uma boa prática é:	Escrever com clareza e revisar erros de digitação.Usar apenas letras maiúsculas para ganhar tempo.Ignorar pontuação e revisar depois da entrega.Inserir imagens antes de qualquer texto.
+Qual combinação de atalhos está correta para negrito, itálico e sublinhado?	Ctrl + B, Ctrl + I, Ctrl + U.Ctrl + N, Ctrl + T, Ctrl + L.Alt + B, Alt + I, Alt + U.Win + B, Win + I, Win + U.
+Tabela em documento é indicada principalmente para:	Organizar e comparar informações.Reproduzir áudio em segundo plano.Criar efeitos de transição entre páginas.Substituir todos os parágrafos do texto.
+A quebra de página em um editor de texto serve para:	Iniciar novo conteúdo em outra página.Apagar o cabeçalho automaticamente.Mudar idioma do teclado.Salvar o arquivo em nuvem.
+Na atividade avaliativa de PTIC, qual era o padrão de nome solicitado para o documento?	AT1_PTIC_1B_T1_nome_sobrenome.PTIC_Avaliacao_Final_nome_turma.Documento_PTIC_Entrega1.Revisao_PTIC_Prova1.
+Qual conjunto representa melhor os eixos trabalhados em PTIC no bimestre?	Organização de arquivos, nuvem, edição de texto e boas práticas digitais.Programação orientada a objetos e banco relacional avançado.Montagem de hardware e soldagem de placas.Desenvolvimento de jogos 3D e modelagem animada.
