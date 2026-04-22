@@ -63,8 +63,6 @@ Em atividades escolares, algumas instituições também pedem escola, curso e tu
 9. Posicione o cursor no final da última linha.
 10. Insira uma quebra de página: clique em **Inserir** > **Quebra de Página**.
 
-!!! tip "Dica"
-    Para trabalhos escolares, o professor pode ter um modelo próprio que simplifica esse layout. Sempre siga as instruções específicas da atividade.
 
 !!! tip "Referência"
     A estrutura da capa segue a norma **ABNT NBR 14724:2011** — Informação e documentação: trabalhos acadêmicos — Apresentação.

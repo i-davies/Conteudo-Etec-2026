@@ -10,7 +10,6 @@ Nesta aula, você vai preparar a base do seu trabalho acadêmico no Word Online,
 
 Com a formatação certa desde o início, o restante do documento fica mais rápido de montar e revisar.
 
----
 
 ## O que vamos aprender
 
@@ -40,6 +39,24 @@ Guarde essa tabela para consultar durante a aula:
 | Espaçamento antes/depois do parágrafo | 0 pt |
 | Alinhamento | Justificado |
 | Recuo da 1ª linha | 1,25 cm |
+
+
+---
+
+## Texto para copiar e colar no documento
+
+Use o bloco abaixo para colar no Word Online e aplicar toda a formatação ABNT praticada nesta aula.
+
+```text
+A organização do trabalho acadêmico começa pela padronização visual do texto. Quando margens, fonte, espaçamento e alinhamento são definidos corretamente, a leitura fica mais clara e o documento transmite mais profissionalismo. Esse cuidado inicial também reduz erros nas etapas seguintes, como inserção de títulos, sumário e referências.
+
+No contexto escolar e técnico, seguir normas de apresentação contribui para desenvolver disciplina, atenção aos detalhes e responsabilidade com a comunicação escrita. Por isso, aprender a configurar o documento desde o início é uma habilidade importante para atividades, relatórios e projetos ao longo do curso.
+
+Além da estética, a formatação adequada facilita revisões e correções. Um texto bem estruturado permite que colegas e professores encontrem informações com mais rapidez, compreendam melhor as ideias e avaliem o conteúdo com mais precisão.
+```
+
+!!! tip "Dica"
+    Depois de colar o texto, selecione tudo com Ctrl + A e reaplique as configurações de margem, fonte, espaçamento, alinhamento e recuo para confirmar se o padrão ABNT foi mantido.
 
 ---
 
@@ -123,50 +140,42 @@ Guarde essa tabela para consultar durante a aula:
 6. Configure recuo de primeira linha em 1,25 cm.
 7. Escreva dois parágrafos curtos para testar a formatação.
 
----
-
-## Teste seus conhecimentos
-
-<quiz>
-Qual conjunto de margens foi adotado nesta aula?
-- [x] Superior e esquerda 3 cm; inferior e direita 2 cm.
-- [ ] Todas as margens 2 cm.
-- [ ] Superior 2 cm e inferior 3 cm.
-</quiz>
-
-<quiz>
-Qual espaçamento entre linhas foi definido para o texto principal?
-- [x] 1,5.
-- [ ] Simples.
-- [ ] Duplo.
-</quiz>
-
-<quiz>
-Qual recuo da primeira linha foi configurado?
-- [x] 1,25 cm.
-- [ ] 0 cm.
-- [ ] 3 cm.
-</quiz>
-
-<!-- mkdocs-quiz results -->
 
 ---
 
-## Exercício de fixação
+## Criando estilos personalizados no Word Online
 
-??? example "Atividade prática: Base de formatação no Word Online"
-    1. Acesse o OneDrive e crie o documento `Exercicio_ABNT_Formatacao_NomeSobrenome`.
-    2. Configure as margens em Layout > Margens > Margens Personalizadas (3/3/2/2).
-    3. Selecione tudo e defina fonte Times New Roman tamanho 12.
-    4. Defina espaçamento 1,5, antes/depois 0 pt e alinhamento justificado.
-    5. Configure recuo de primeira linha em 1,25 cm.
-    6. Escreva dois parágrafos curtos sobre um tema da sua área.
-    7. Compartilhe o link do documento com o professor como **Leitor**.
+Antes de começar o trabalho, crie estilos próprios para evitar que o tema padrão do OneDrive altere fonte, tamanho e espaçamento.
 
-    **Checklist de entrega:**
+### Estilo do corpo do texto
 
-    - Documento criado e nomeado corretamente no OneDrive.
-    - Margens configuradas: superior/esquerda 3 cm, inferior/direita 2 cm.
-    - Fonte Times New Roman ou Arial, tamanho 12.
-    - Espaçamento 1,5 e alinhamento justificado.
-    - Recuo de 1,25 cm na primeira linha dos parágrafos.
+1. Digite um parágrafo de exemplo.
+2. Formate esse parágrafo com:
+   - fonte Times New Roman ou Arial;
+   - tamanho 12;
+   - alinhamento justificado;
+   - espaçamento 1,5;
+   - recuo da primeira linha em 1,25 cm;
+   - espaçamento antes/depois em 0 pt.
+3. Selecione o parágrafo já formatado.
+4. Na aba **Página Inicial**, abra o painel de **Estilos**.
+5. Clique em **Criar um estilo** (ou opção equivalente da conta).
+6. Nomeie como **Corpo ABNT**.
+
+### Estilos de títulos
+
+1. Digite um título de exemplo.
+2. Aplique a formatação definida pelo professor para seção principal.
+3. No painel de estilos, crie o estilo **Título ABNT 1**.
+4. Repita para subtítulos e crie o estilo **Título ABNT 2**.
+
+### Como usar no documento
+
+1. Selecione os parágrafos do texto e aplique **Corpo ABNT**.
+2. Aplique **Título ABNT 1** nas seções principais.
+3. Aplique **Título ABNT 2** nos subtópicos.
+
+!!! tip "Dica"
+    Se sua conta do Word Online tiver limitações para criar estilos completos, use os estilos prontos (Normal, Título 1 e Título 2) e ajuste manualmente a formatação para manter o padrão da turma.
+
+---

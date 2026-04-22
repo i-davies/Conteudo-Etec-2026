@@ -115,6 +115,75 @@ AUTOR ou INSTITUIÇÃO. Título da página. Disponível em: link. Acesso em: dia
 
 ---
 
+## Referências ABNT
+
+Use os modelos abaixo para copiar, colar e adaptar com os dados reais da sua fonte.
+
+### Livro
+
+```text
+SOBRENOME, Nome. Título: subtítulo. Edição. Cidade: Editora, ano.
+```
+
+### Capítulo de livro
+
+```text
+SOBRENOME, Nome. Título do capítulo. In: SOBRENOME, Nome (org.). Título do livro. Edição. Cidade: Editora, ano. p. xx-yy.
+```
+
+### Artigo de periódico
+
+```text
+SOBRENOME, Nome. Título do artigo. Título do periódico, cidade, v. x, n. y, p. xx-yy, mês abreviado. ano.
+```
+
+### Trabalho de congresso (evento)
+
+```text
+SOBRENOME, Nome. Título do trabalho. In: NOME DO EVENTO, número., ano, cidade. Anais [...]. Cidade: Instituição, ano. p. xx-yy.
+```
+
+### Site com autor institucional
+
+```text
+INSTITUIÇÃO. Título da página. Disponível em: URL. Acesso em: dia mês abreviado. ano.
+```
+
+### Página da web com autor pessoal
+
+```text
+SOBRENOME, Nome. Título da página. Nome do site, ano. Disponível em: URL. Acesso em: dia mês abreviado. ano.
+```
+
+### Vídeo online
+
+```text
+AUTOR OU CANAL. Título do vídeo. Plataforma, ano. Disponível em: URL. Acesso em: dia mês abreviado. ano.
+```
+
+### TCC, monografia, dissertação ou tese
+
+```text
+SOBRENOME, Nome. Título: subtítulo. Ano. Total de folhas. Tipo de trabalho (Curso) - Instituição, cidade, ano.
+```
+
+### Legislação
+
+```text
+PAÍS, ESTADO ou MUNICÍPIO. Título da lei, número e data. Ementa. Diário oficial, local, data.
+```
+
+### Norma técnica
+
+```text
+ABNT. NBR número: título da norma. Cidade: ABNT, ano.
+```
+
+!!! tip "Dica"
+    Na lista final, organize em ordem alfabética pelo sobrenome do autor (ou nome da instituição) e mantenha o mesmo padrão de pontuação em todas as referências.
+
+---
+
 ## Passo a passo resumido
 
 1. Abra o documento no OneDrive.
