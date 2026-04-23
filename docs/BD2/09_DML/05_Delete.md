@@ -1,4 +1,4 @@
-# DML no MySQL: `DELETE` para Remoção de Dados
+# `DELETE` para Remoção de Dados
 
 > Nesta etapa, vamos remover registros de forma controlada usando o comando `DELETE`.
 

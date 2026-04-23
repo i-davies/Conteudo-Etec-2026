@@ -1,4 +1,4 @@
-# DML no MySQL: `UPDATE` para Alteração de Dados
+# `UPDATE` para Alteração de Dados
 
 > Nesta etapa, vamos atualizar registros já existentes com segurança usando o comando `UPDATE`.
 

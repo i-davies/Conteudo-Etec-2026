@@ -1,4 +1,4 @@
-# DML no MySQL: `INSERT INTO` e Carga Inicial de Dados
+# `INSERT INTO` e Carga Inicial de Dados
 
 > Nesta aula, vamos iniciar a manipulação de dados usando `DML`, com foco em `INSERT INTO` para montar massa de teste.
 
