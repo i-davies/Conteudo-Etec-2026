@@ -110,22 +110,36 @@ Qual exemplo representa citação direta curta?
 
 ## Exercício de fixação
 
-??? example "Atividade prática: ABNT versão inicial no Word Online"
-    1. Acesse o OneDrive e crie o documento `Exercicio_ABNT_Inicial_NomeSobrenome`.
-    2. Configure as margens em Layout > Margens > Margens Personalizadas (3/3/2/2).
-    3. Defina fonte Times New Roman tamanho 12, espaçamento 1,5 e alinhamento justificado.
-    4. Crie as partes: Capa, Introdução, Desenvolvimento, Conclusão e Referências.
-    5. Use quebra de página para separar cada parte.
-    6. Escreva um parágrafo com citação indireta.
-    7. Escreva uma frase com citação direta curta, autor, ano e página.
-    8. Adicione ao menos uma referência na última página.
-    9. Compartilhe o link com o professor como **Leitor**.
+??? example "Produção autoral: tecnologia e aprendizagem"
+    **Tema sugerido:**
+
+    O impacto do uso da tecnologia na aprendizagem dos estudantes.
+
+    **Objetivo:**
+
+    Produzir um mini trabalho acadêmico no Word Online aplicando todas as normas ABNT estudadas até aqui.
+
+    **Etapas da atividade:**
+
+    1. Crie o documento `Exercicio_ABNT_NomeSobrenome` no OneDrive.
+    2. Configure o documento com margens 3 cm (superior/esquerda) e 2 cm (inferior/direita).
+    3. Defina fonte Times New Roman ou Arial, tamanho 12, espaçamento 1,5 e alinhamento justificado.
+    4. Monte a estrutura com páginas separadas: Capa, Sumário, Introdução, Desenvolvimento, Conclusão e Referências.
+    5. Use estilos de título para gerar o sumário automático.
+    6. Escreva no mínimo:
+       - 1 parágrafo na Introdução;
+       - 2 parágrafos no Desenvolvimento;
+       - 1 parágrafo na Conclusão.
+    7. Inclua uma citação indireta e uma citação direta curta com autor, ano e página.
+    8. Adicione pelo menos duas referências reais, em formato ABNT, na última página.
+    9. Revise ortografia, acentuação e padronização visual antes de finalizar.
 
     **Checklist de entrega:**
 
-    - Documento criado e nomeado corretamente no OneDrive.
-    - Regras básicas de formatação aplicadas.
-    - Estrutura mínima organizada com quebras de página.
-    - Citações inseridas corretamente.
-    - Referências no final.
+    - Documento com formatação ABNT aplicada corretamente.
+    - Estrutura completa com quebras de página.
+    - Sumário automático funcionando.
+    - Texto autoral com introdução, desenvolvimento e conclusão.
+    - Citação indireta e citação direta curta corretas.
+    - Referências em padrão ABNT.
     - Link compartilhado como Leitor.
