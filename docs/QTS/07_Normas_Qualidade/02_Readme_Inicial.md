@@ -31,9 +31,9 @@ A proposta conecta prática de desenvolvimento com normas e modelos estudados em
 
 ## Passo a passo da prática em sala
 
-### Preparar o projeto com a turma
+### Preparar o projeto
 
-Escolham um tema simples para o projeto (exemplo: calculadora, lista de tarefas ou agenda).
+Escolham um tema simples para o projeto (exemplo: recomendador de filmes da turma, lista de tarefas ou agenda).
 
 No terminal:
 
@@ -50,6 +50,42 @@ Crie um arquivo `README.md` com as seções:
 - Funcionalidades planejadas
 - Como executar
 - Controle de Qualidade (testes planejados)
+
+```markdown
+# Nome do Projeto
+
+## Objetivo
+Descreva em uma frase qual problema este projeto resolve.
+
+## Funcionalidades planejadas
+- [ ] Funcionalidade 1
+- [ ] Funcionalidade 2
+- [ ] Funcionalidade 3
+
+## Como executar
+### Pré-requisitos
+- Python 3.12+
+- UV instalado
+
+### Passos
+1. Clonar o repositório.
+2. Entrar na pasta do projeto.
+3. Executar:
+    ```bash
+    uv run main.py
+    ```
+
+## Controle de Qualidade
+### Testes planejados
+- [ ] Cenário válido principal
+- [ ] Cenário inválido principal
+- [ ] Cenário de borda
+
+### Padrões adotados
+- Commits semânticos (`docs`, `feat`, `fix`)
+- Branch por tipo de mudança
+- Histórico rastreável
+```
 
 Ligação com norma:
 
@@ -81,14 +117,32 @@ Ligação com norma:
 git checkout -b feature/primeira-funcionalidade
 ```
 
-Crie um arquivo simples do projeto, por exemplo `calculadora.py`, com uma função básica.
+Crie um arquivo simples do projeto, por exemplo `catalogo_filmes.py`, com uma função básica de recomendação.
 
 Commit sugerido:
 
 ```bash
 git add .
-git commit -m "feat: adiciona funcao inicial da calculadora"
+git commit -m "feat: adiciona recomendacao inicial por genero"
 ```
+
+### Primeiro Pull Request da turma
+
+Envie a branch de funcionalidade para o GitHub:
+
+```bash
+git push -u origin feature/primeira-funcionalidade
+```
+
+No GitHub:
+
+1. Clicar em **Compare & pull request**.
+2. Revisar `base: main` e `compare: feature/primeira-funcionalidade`.
+3. Criar o PR com título e descrição objetiva.
+4. Se disponível, ativar **Enable auto-merge** para merge automático.
+5. Se auto-merge não estiver habilitado, usar **Merge pull request**.
+
+Esse será o primeiro PR da turma, com evidência prática de revisão e rastreabilidade.
 
 Ligação com norma:
 
@@ -100,16 +154,16 @@ Ligação com norma:
 Crie uma branch de correção:
 
 ```bash
-git checkout -b fix/tratamento-divisao-zero
+git checkout -b fix/validacao-genero
 ```
 
-Simule um problema (divisão por zero sem tratamento), depois corrija.
+Simule um problema (gênero inválido sem tratamento), depois corrija.
 
 Commit sugerido:
 
 ```bash
 git add .
-git commit -m "fix: trata divisao por zero na funcao dividir"
+git commit -m "fix: trata genero inexistente sem falha"
 ```
 
 Ligação com norma:
@@ -124,9 +178,10 @@ Retorne ao branch principal e faça merge das entregas:
 ```bash
 git checkout main
 git merge feature/documentacao-inicial
-git merge feature/primeira-funcionalidade
-git merge fix/tratamento-divisao-zero
+git merge fix/validacao-genero
 ```
+
+Observação: a branch `feature/primeira-funcionalidade` já terá sido integrada por PR na interface do GitHub.
 
 No GitHub, o mesmo fluxo pode ser feito com Pull Requests para reforçar revisão e evidência de processo.
 
@@ -143,20 +198,22 @@ Use estes prefixos durante toda a atividade:
 Exemplos:
 
 - `docs: atualiza secao de controle de qualidade`
-- `feat: adiciona operacao de soma`
-- `fix: corrige validacao de entrada`
+- `feat: adiciona recomendacao por genero`
+- `fix: corrige validacao de genero`
 
 ??? tip "Critério rápido para validar commit"
     Uma boa mensagem deve responder: o que mudou e por que mudou.
 
 ---
 
-## Checklist de entrega
+## Padrão de Markdown da aula
 
-- [ ] O README possui as seções combinadas em aula.
-- [ ] Existe branch separada para documentação.
-- [ ] Existe branch separada para funcionalidade.
-- [ ] Existe branch separada para correção.
-- [ ] Os commits seguem o padrão `docs`, `feat` e `fix`.
-- [ ] O histórico permite rastrear a evolução do projeto.
+Use este padrão em todos os READMEs da atividade:
 
+- Títulos em hierarquia com `#`, `##` e `###`.
+- Listas objetivas com `-`.
+- Checklist com `- [ ]` para planejamento.
+- Blocos de código com linguagem declarada (`bash`, `python`, `markdown`).
+- Texto direto, com frases curtas e termos técnicos claros.
+
+---

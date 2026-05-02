@@ -66,3 +66,4 @@ plugins:
       shuffle_answers: true
 
 exclude_docs: |
+  QTS/07_Normas_Qualidade/gabarito/**
