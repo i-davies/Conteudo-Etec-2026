@@ -1,91 +1,67 @@
-# Deploy com Render (Laravel API) - Versao Simples
+# Deploy com Render (Laravel API) com Docker
 
-> Objetivo: subir uma API Laravel basica no Render e testar funcionando online.
+> Objetivo: subir uma API Laravel básica no Render usando Docker e testar funcionando online.
 
 ---
 
-## O minimo que voce precisa
+## O que você precisa
 
 - conta no GitHub;
 - conta no Render;
-- VS Code instalado.
+- VS Code instalado;
+- Docker Desktop instalado e funcionando.
 
 ---
 
-## Se nao tiver PHP e Composer instalados
+## Por que usar Docker no Render para Laravel?
 
-Para esta aula, use o caminho mais simples no Windows:
+No Render, não existe runtime nativo de Laravel/PHP como existe para Node e Python.
 
-### Opcao recomendada: Laragon
+Para projetos em PHP, o caminho recomendado é publicar com **Docker**.
 
-1. Instale o Laragon: <https://laragon.org/download/>
-2. Abra o Laragon e clique em **Start All**.
-3. Abra um terminal novo e teste:
+Em linguagem simples:
+
+- você descreve o ambiente da aplicação em um arquivo `Dockerfile`;
+- o Render monta esse ambiente;
+- a API sobe com a mesma configuração em qualquer máquina.
+
+??? tip "Conceito rápido: o que é Docker?"
+    Docker empacota sua aplicação com tudo o que ela precisa para rodar.
+
+    Pense assim:
+    - sua API + PHP + dependências = uma imagem;
+    - essa imagem roda em um contêiner;
+    - o Render executa esse contêiner na nuvem.
+
+---
+
+## Configurar Docker no Windows (primeira vez)
+
+1. Instale o Docker Desktop: <https://www.docker.com/products/docker-desktop/>
+2. Abra o instalador e mantenha a opção de **WSL 2** habilitada.
+3. Reinicie o computador, se o instalador solicitar.
+4. Abra o Docker Desktop e aguarde aparecer que o Engine está em execução.
+5. Abra um terminal novo e teste:
 
 ```bash
-php -v
-composer -V
+docker --version
+docker run hello-world
 ```
 
-Se os dois comandos mostrarem versao, esta pronto.
-
-### Opcao alternativa (manual)
-
-- Instalar PHP: <https://windows.php.net/download/>
-- Instalar Composer: <https://getcomposer.org/download/>
-
-Depois, feche e abra o terminal novamente e teste `php -v` e `composer -V`.
+Se o `hello-world` executar sem erro, o Docker está pronto.
 
 ---
 
-## Criar projeto Laravel do zero (com IA)
+## Criar projeto Laravel base
 
-Voce pode criar do zero com ajuda de IA.
-
-### Opcao 1 - GitHub Copilot Free (recomendado)
-
-1. Abra o VS Code em uma pasta vazia.
-2. No terminal, rode:
+Se você ainda não tem o projeto, crie com:
 
 ```bash
 composer create-project laravel/laravel api-render
+cd api-render
 ```
 
-3. Abra a pasta criada no VS Code.
-4. No chat do Copilot, use este prompt:
-
-```text
-Estou em um projeto Laravel novo.
-Crie uma rota GET /api/status que retorne JSON com {"ok": true}.
-Mostre exatamente em qual arquivo devo colocar o codigo.
-```
-
-### Opcao 2 - Outra IA (Antigravity, ChatGPT, Claude, Gemini)
-
-Use um prompt simples:
-
-```text
-Tenho um projeto Laravel vazio.
-Me passe o codigo minimo para criar uma rota GET /api/status
-retornando JSON {"ok": true} e diga em qual arquivo colocar.
-```
-
-Depois, copie o codigo gerado para o projeto.
-
----
-
-## Projeto base (1 rota)
-
-O Laravel ja reconhece automaticamente o arquivo `routes/api.php`.
-Voce nao precisa importar esse arquivo em outro lugar.
-
-O que precisa importar no proprio arquivo e apenas a facade `Route`:
-
-```php
-use Illuminate\Support\Facades\Route;
-```
-
-No arquivo `routes/api.php`, deixe algumas rotas simples:
+No arquivo `routes/api.php`, deixe as rotas:
 
 ```php
 use Illuminate\Support\Facades\Route;
@@ -97,7 +73,7 @@ Route::get('/status', function () {
 Route::get('/empresa', function () {
     return response()->json([
         'nome' => 'Empresa Exemplo',
-        'cidade' => 'Sao Paulo'
+        'cidade' => 'São Paulo'
     ]);
 });
 
@@ -105,18 +81,18 @@ Route::get('/servicos', function () {
     return response()->json([
         'servicos' => [
             'Desenvolvimento Web',
-            'Manutencao de Sistemas',
-            'Suporte Tecnico'
+            'Manutenção de Sistemas',
+            'Suporte Técnico'
         ]
     ]);
 });
 ```
 
-## Rodar sem SQLite (recomendado para esta aula)
+---
 
-Como esta API inicial nao usa banco de dados, o caminho mais simples e desligar o uso de DB no ambiente.
+## Preparar variáveis de ambiente
 
-No arquivo `.env`, ajuste para:
+No arquivo `.env`, garanta:
 
 ```env
 SESSION_DRIVER=file
@@ -124,31 +100,76 @@ CACHE_STORE=file
 QUEUE_CONNECTION=sync
 ```
 
-Com isso, o Laravel nao vai tentar salvar sessao/cache em banco.
-
-Importante:
-
-- nao use `SESSION_DRIVER=database` nesta aula;
-- se tiver `DB_CONNECTION=sqlite`, pode manter sem problema,
-  desde que nao use sessao/cache em banco e nao rode consultas.
-
-Teste local rapido:
+Gere a chave da aplicação localmente:
 
 ```bash
-copy .env.example .env
-php artisan key:generate
-php artisan serve
+php artisan key:generate --show
 ```
 
-Abra:
-
-- `http://127.0.0.1:8000/api/status`
-- `http://127.0.0.1:8000/api/empresa`
-- `http://127.0.0.1:8000/api/servicos`
+Guarde o valor gerado para usar no Render como `APP_KEY`.
 
 ---
 
-## Subir para o GitHub (resumo)
+## Criar Dockerfile da API
+
+Na raiz do projeto Laravel, crie o arquivo `Dockerfile`:
+
+```Dockerfile
+FROM php:8.3-cli
+
+WORKDIR /var/www
+
+RUN apt-get update && apt-get install -y \
+    git \
+    unzip \
+    libzip-dev \
+    && docker-php-ext-install zip \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
+
+COPY . .
+
+RUN composer install --no-dev --optimize-autoloader --no-interaction
+
+CMD sh -c "php artisan serve --host 0.0.0.0 --port ${PORT:-8000}"
+```
+
+Também crie o arquivo `.dockerignore`:
+
+```text
+.git
+node_modules
+vendor
+storage/logs
+.env
+```
+
+---
+
+## Testar com Docker na máquina local
+
+1. Monte a imagem:
+
+```bash
+docker build -t api-render-laravel .
+```
+
+2. Rode o contêiner com variáveis:
+
+```bash
+docker run --rm -p 8000:8000 -e APP_KEY="SUA_APP_KEY_AQUI" -e SESSION_DRIVER=file -e CACHE_STORE=file -e QUEUE_CONNECTION=sync -e PORT=8000 api-render-laravel
+```
+
+3. Teste no navegador:
+
+- <http://127.0.0.1:8000/api/status>
+- <http://127.0.0.1:8000/api/empresa>
+- <http://127.0.0.1:8000/api/servicos>
+
+---
+
+## Subir para o GitHub
 
 1. Abra a pasta do projeto no VS Code.
 2. Faça o commit inicial.
@@ -156,25 +177,21 @@ Abra:
 
 ---
 
-## Deploy no Render (passo a passo curto)
+## Deploy no Render com Docker
 
 1. Entre em <https://render.com> com GitHub.
 2. Clique em **New +** > **Web Service**.
-3. Selecione seu repositorio Laravel.
-4. Configure:
-
-- **Build Command:** `composer install`
-- **Start Command:** `php artisan serve --host 0.0.0.0 --port $PORT`
-
+3. Selecione o repositório Laravel.
+4. O Render deve detectar o `Dockerfile` automaticamente.
 5. Em **Environment Variables**, adicione:
 
-- `APP_KEY` (gere localmente com `php artisan key:generate --show` e cole no Render)
+- `APP_KEY` (valor gerado no `php artisan key:generate --show`)
 - `SESSION_DRIVER=file`
 - `CACHE_STORE=file`
 - `QUEUE_CONNECTION=sync`
 
 6. Clique em **Create Web Service**.
-7. Espere finalizar o deploy.
+7. Aguarde o build e o deploy finalizarem.
 
 ---
 
@@ -186,15 +203,15 @@ Abra no navegador:
 - `https://SEU-ENDERECO.onrender.com/api/empresa`
 - `https://SEU-ENDERECO.onrender.com/api/servicos`
 
-Se as rotas responderem JSON, deu certo.
+Se as rotas responderem JSON, o deploy funcionou.
 
 ---
 
 ## Entrega
 
-1. Link do repositorio no GitHub.
+1. Link do repositório no GitHub.
 2. Link da API no Render.
 
 ??? warning "Foco da semana"
-    Neste momento, o foco e entender o fluxo de deploy.
-    Configuracoes avancadas ficam para as proximas aulas.
+    Neste momento, o foco é entender o fluxo de deploy com Docker no Render.
+    Configurações avançadas ficam para as próximas aulas.
