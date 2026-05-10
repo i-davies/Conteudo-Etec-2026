@@ -46,6 +46,32 @@ Você pode mudar espessura, tipo e cor.
 }
 ```
 
+#### Tipos de Borda
+
+A propriedade `border` aceita diferentes estilos de linha:
+
+- **solid**: linha reta contínua (mais comum).
+- **dashed**: linha tracejada com espaços maiores.
+- **dotted**: linha de pontos pequenos.
+- **double**: duas linhas paralelas.
+- **groove**: efeito 3D de linha sulcada para dentro.
+- **ridge**: efeito 3D de linha em relevo para fora.
+- **inset**: efeito 3D como se o elemento estivesse afundado.
+- **outset**: efeito 3D como se o elemento estivesse em relevo.
+- **none**: sem borda.
+- **hidden**: oculta a borda (similar a `none`).
+
+Exemplos:
+
+```css
+.bordas-diferentes {
+  border: 3px solid #333;
+  border: 3px dashed #ff006e;
+  border: 3px dotted #118ab2;
+  border: 5px double #f77f00;
+}
+```
+
 ### `margin`
 
 É o espaço do lado de fora da borda.
