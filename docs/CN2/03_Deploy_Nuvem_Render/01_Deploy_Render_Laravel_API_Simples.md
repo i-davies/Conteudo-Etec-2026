@@ -215,3 +215,55 @@ Se as rotas responderem JSON, o deploy funcionou.
 ??? warning "Foco da semana"
     Neste momento, o foco é entender o fluxo de deploy com Docker no Render.
     Configurações avançadas ficam para as próximas aulas.
+
+---
+
+## Exercício de fixação
+
+??? example "Desafio prático: API do TCC com Laravel, Docker e Render"
+    Nesta atividade, você vai repetir o fluxo completo da aula, agora com um projeto novo e com tema do seu TCC.
+
+    ### Objetivo do desafio
+
+    Criar uma nova API Laravel, configurar com Docker, publicar no Render e garantir que os endpoints representem o contexto real do seu TCC.
+
+    ### Ferramenta de IA obrigatória
+
+    Use o Google Antigravity para apoiar a criação inicial das rotas e da estrutura de respostas JSON.
+
+    ### Requisitos
+
+    - criar um novo projeto Laravel do zero;
+    - aplicar as mesmas configurações de ambiente usadas nesta aula (`SESSION_DRIVER=file`, `CACHE_STORE=file`, `QUEUE_CONNECTION=sync`);
+    - criar `Dockerfile` e `.dockerignore`;
+    - publicar no Render via Docker;
+    - criar no mínimo 3 endpoints de API coerentes com o tema do seu TCC.
+
+    ### Regra principal dos endpoints
+
+    Os endpoints devem fazer sentido para o seu projeto.
+
+    Exemplo de coerência:
+    
+    - se o TCC for da área de clínica, use rotas como `/api/pacientes`, `/api/agendamentos`, `/api/especialidades`;
+    - se o TCC for da área escolar, use rotas como `/api/alunos`, `/api/turmas`, `/api/disciplinas`.
+
+    Evite endpoints genéricos sem relação com o tema.
+
+    ### Sugestão de prompt para o Google Antigravity
+
+    ```text
+    Estou criando uma API Laravel para o meu TCC: [TEMA DO TCC].
+    Gere 3 endpoints GET coerentes com esse tema, com respostas JSON simples.
+    Mostre exatamente como deve ficar o arquivo routes/api.php.
+    Depois, me lembre das variáveis de ambiente para rodar sem banco
+    (SESSION_DRIVER=file, CACHE_STORE=file, QUEUE_CONNECTION=sync).
+    ```
+
+    ### Entrega
+
+    Envie:
+    1. nome do TCC;
+    2. link do repositório no GitHub;
+    3. link da API publicada no Render;
+    4. lista dos 3 endpoints criados com breve descrição de cada um.
