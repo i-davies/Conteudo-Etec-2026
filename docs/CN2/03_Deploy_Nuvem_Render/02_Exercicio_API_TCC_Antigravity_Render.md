@@ -1,6 +1,6 @@
 # Exercício - API do TCC com Antigravity + Deploy no Render
 
-> Objetivo: criar uma API Laravel alinhada ao tema do TCC, gerar uma landing page com apoio de IA e publicar no Render.
+> Objetivo: criar primeiro uma API Laravel alinhada ao tema do TCC, publicar no Render e, depois, criar uma landing page para apresentação do projeto.
 
 ---
 
@@ -8,10 +8,10 @@
 
 Você vai atuar como desenvolvedor da primeira versão online do seu TCC.
 
-Nesta atividade, o projeto precisa entregar dois resultados no mesmo repositório:
+Nesta atividade, o projeto precisa entregar dois resultados no mesmo repositório, em ordem:
 
-- uma API com endpoints coerentes com o tema;
-- uma landing page simples para apresentar o projeto.
+- primeiro: uma API com endpoints coerentes com o tema;
+- depois: uma landing page simples para apresentar o projeto já publicado.
 
 ---
 
@@ -30,19 +30,31 @@ Use o Google Antigravity para apoiar:
     - peça sempre conteúdo em português com linguagem formal e objetiva;
     - revise antes de publicar: nomes de rotas, textos, ortografia e consistência do tema.
 
+??? tip "Prompt sugerido para criar a API"
+    ```text
+    Estou criando uma API Laravel para meu TCC com o tema [TEMA].
+    Gere um arquivo routes/api.php com:
+    - rota GET /api/status
+    - mais 3 rotas GET coerentes com o tema
+    - respostas JSON simples e didáticas
+    Depois, mostre sugestões de nomes de recursos e um exemplo de retorno para cada rota.
+    Lembre também das variáveis de ambiente para rodar sem banco externo:
+    SESSION_DRIVER=file, CACHE_STORE=file, QUEUE_CONNECTION=sync.
+    ```
+
 ---
 
 ## Requisitos obrigatórios
 
 - criar um novo projeto Laravel;
 - configurar ambiente para execução sem banco externo:
-  - `SESSION_DRIVER=file`
-  - `CACHE_STORE=file`
-  - `QUEUE_CONNECTION=sync`
+    - SESSION_DRIVER=file
+    - CACHE_STORE=file
+    - QUEUE_CONNECTION=sync
 - criar `Dockerfile` e `.dockerignore`;
 - publicar no Render com Docker;
 - criar no mínimo 3 endpoints GET coerentes com o tema do TCC;
-- criar uma landing page inicial do projeto (rota `/`) no mesmo Laravel.
+- após o deploy da API, criar uma landing page inicial do projeto (rota `/`) no mesmo Laravel.
 
 ---
 
@@ -60,7 +72,20 @@ Evite endpoints genéricos sem relação com o tema.
 
 ---
 
-## Landing page com Antigravity
+## Etapas sugeridas
+
+### Etapa 1 - Criar API e publicar no Render
+
+1. Crie o projeto Laravel.
+2. Use o prompt sugerido no Antigravity para gerar as rotas da API.
+3. Ajuste o arquivo `routes/api.php`.
+4. Teste os endpoints localmente.
+5. Configure `Dockerfile` e `.dockerignore`.
+6. Faça push para GitHub.
+7. Publique no Render via Web Service com Docker.
+8. Teste os endpoints `/api/...` em produção.
+
+### Etapa 2 - Criar landing page após o deploy da API
 
 A landing page deve explicar o seu projeto de forma curta e clara.
 
@@ -74,8 +99,8 @@ Conteúdo mínimo esperado:
 
 ??? tip "Prompt sugerido para gerar a landing page"
     ```text
-    Estou criando um projeto de TCC chamado [NOME DO PROJETO], da área [AREA].
-    Gere uma landing page simples para Laravel Blade, em português, com:
+    Minha API Laravel do TCC já está publicada no Render.
+    Gere uma landing page simples para apresentar o projeto, em português, com:
     - título do projeto
     - resumo do problema
     - público-alvo
@@ -85,30 +110,12 @@ Conteúdo mínimo esperado:
     Entregue código para resources/views/home.blade.php e rota em routes/web.php.
     ```
 
----
-
-## Etapas sugeridas
-
-### Parte 1 - Gerar API base
-
-1. Crie o projeto Laravel.
-2. Peça ao Antigravity sugestões de 3 endpoints para o tema do TCC.
-3. Ajuste o arquivo `routes/api.php`.
-4. Teste os endpoints localmente.
-
-### Parte 2 - Criar landing page
-
 1. Peça ao Antigravity o conteúdo inicial da landing page.
 2. Crie a view Blade.
 3. Configure a rota `/` em `routes/web.php`.
 4. Valide visual no navegador (desktop e celular).
 
-### Parte 3 - Deploy no Render
-
-1. Configure `Dockerfile` e `.dockerignore`.
-2. Faça push para GitHub.
-3. Publique no Render via Web Service com Docker.
-4. Teste a rota `/` e os endpoints `/api/...` em produção.
+Depois da publicação da landing page, teste a rota `/` e os endpoints `/api/...` em produção.
 
 ---
 
