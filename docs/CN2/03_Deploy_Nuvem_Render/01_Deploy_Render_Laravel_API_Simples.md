@@ -135,6 +135,47 @@ RUN composer install --no-dev --optimize-autoloader --no-interaction
 CMD sh -c "php artisan serve --host 0.0.0.0 --port ${PORT:-8000}"
 ```
 
+??? tip "Fix para projetos Laravel 13 com erro no Render"
+    Se o projeto foi criado com Laravel 13 e o deploy falhar no Render, use este Dockerfile ajustado:
+
+    ```Dockerfile
+    FROM php:8.3-cli
+
+    WORKDIR /var/www
+
+    RUN apt-get update && apt-get install -y \
+        git \
+        unzip \
+        libicu-dev \
+        libonig-dev \
+        libxml2-dev \
+        libzip-dev \
+        && docker-php-ext-install \
+            bcmath \
+            intl \
+            mbstring \
+            pcntl \
+            pdo \
+            pdo_mysql \
+            zip \
+        && rm -rf /var/lib/apt/lists/*
+
+    COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
+
+    COPY . .
+
+    ENV COMPOSER_ALLOW_SUPERUSER=1
+    ENV COMPOSER_MEMORY_LIMIT=-1
+
+    RUN php -r "file_exists('.env') || copy('.env.example', '.env');" \
+        && composer install --no-dev --optimize-autoloader --no-interaction --prefer-dist --no-progress \
+        && php artisan key:generate --force --no-interaction \
+        && touch database/database.sqlite \
+        && php artisan migrate --force --no-interaction
+
+    CMD sh -c "php artisan serve --host 0.0.0.0 --port ${PORT:-8000}"
+    ```
+
 Também crie o arquivo `.dockerignore`:
 
 ```text
@@ -220,50 +261,6 @@ Se as rotas responderem JSON, o deploy funcionou.
 
 ## Exercício de fixação
 
-??? example "Desafio prático: API do TCC com Laravel, Docker e Render"
-    Nesta atividade, você vai repetir o fluxo completo da aula, agora com um projeto novo e com tema do seu TCC.
+O exercício desta aula foi separado em um arquivo próprio para facilitar a organização.
 
-    ### Objetivo do desafio
-
-    Criar uma nova API Laravel, configurar com Docker, publicar no Render e garantir que os endpoints representem o contexto real do seu TCC.
-
-    ### Ferramenta de IA obrigatória
-
-    Use o Google Antigravity para apoiar a criação inicial das rotas e da estrutura de respostas JSON.
-
-    ### Requisitos
-
-    - criar um novo projeto Laravel do zero;
-    - aplicar as mesmas configurações de ambiente usadas nesta aula (`SESSION_DRIVER=file`, `CACHE_STORE=file`, `QUEUE_CONNECTION=sync`);
-    - criar `Dockerfile` e `.dockerignore`;
-    - publicar no Render via Docker;
-    - criar no mínimo 3 endpoints de API coerentes com o tema do seu TCC.
-
-    ### Regra principal dos endpoints
-
-    Os endpoints devem fazer sentido para o seu projeto.
-
-    Exemplo de coerência:
-    
-    - se o TCC for da área de clínica, use rotas como `/api/pacientes`, `/api/agendamentos`, `/api/especialidades`;
-    - se o TCC for da área escolar, use rotas como `/api/alunos`, `/api/turmas`, `/api/disciplinas`.
-
-    Evite endpoints genéricos sem relação com o tema.
-
-    ### Sugestão de prompt para o Google Antigravity
-
-    ```text
-    Estou criando uma API Laravel para o meu TCC: [TEMA DO TCC].
-    Gere 3 endpoints GET coerentes com esse tema, com respostas JSON simples.
-    Mostre exatamente como deve ficar o arquivo routes/api.php.
-    Depois, me lembre das variáveis de ambiente para rodar sem banco
-    (SESSION_DRIVER=file, CACHE_STORE=file, QUEUE_CONNECTION=sync).
-    ```
-
-    ### Entrega
-
-    Envie:
-    1. nome do TCC;
-    2. link do repositório no GitHub;
-    3. link da API publicada no Render;
-    4. lista dos 3 endpoints criados com breve descrição de cada um.
+Siga em: [Exercício - API do TCC com Antigravity + Deploy no Render](02_Exercicio_API_TCC_Antigravity_Render.md).
