@@ -68,3 +68,4 @@ plugins:
 exclude_docs: |
   QTS/07_Normas_Qualidade/gabarito/**
   QTS/09_Teste_de_Caixa_Branca/gabarito/**
+  PW1/14_Flexbox_II_Criando_um_Menu/gabarito/**
