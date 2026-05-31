@@ -4,7 +4,7 @@ Este material revisa os principais conteúdos de PTIC para a prova do 2º bimest
 
 Use o quiz para treinar e identificar os pontos que precisam de reforço.
 
-## Simulado de Revisão (45 questões)
+## Simulado de Revisão
 
 <quiz>
 De acordo com o padrão trabalhado em aula, qual é o tamanho de papel do documento acadêmico?
