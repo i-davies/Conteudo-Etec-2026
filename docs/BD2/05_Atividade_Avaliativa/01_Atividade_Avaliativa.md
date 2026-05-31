@@ -22,8 +22,6 @@ Use o banco `bd2_avaliativa_consultas`, já preparado para esta atividade.
 
 Faça o download e execute primeiro o arquivo:
 
-- [02_SQL_Base_Atividade_Avaliativa.sql](02_SQL_Base_Atividade_Avaliativa.sql)
-
 ---
 
 ## Cenário
@@ -93,9 +91,3 @@ Seu papel é gerar consultas para apoiar decisões da equipe comercial.
 - `2,0 pts`: construção correta da consulta integradora com ordenação completa
 
 ---
-
-## Gabarito
-
-Arquivo para conferência do professor:
-
-- [03_Gabarito_Atividade_Avaliativa.sql](03_Gabarito_Atividade_Avaliativa.sql)
