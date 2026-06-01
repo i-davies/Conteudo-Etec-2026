@@ -4,7 +4,9 @@
 
 ---
 
-## Consulta oficial
+## Solução do desafio 2: consulta integradora principal
+
+Consulta única solicitada no enunciado:
 
 ```sql
 USE bd2_revisao_prova_pratica;
@@ -40,7 +42,7 @@ ORDER BY
 
 ---
 
-## Validação da quantidade de linhas
+## Validação opcional do resultado final
 
 ```sql
 USE bd2_revisao_prova_pratica;
@@ -61,14 +63,15 @@ WHERE setor IN ('Infraestrutura', 'Desenvolvimento', 'Dados', 'Suporte')
   );
 ```
 
-Resultado esperado: `9` linhas.
+Resultado esperado do relatório: `9` linhas.
 
 ---
 
-## Checklist rápido de correção
+## Checklist de conferência
 
-- A consulta retorna somente os campos pedidos.
-- As duas regras compostas foram aplicadas com parênteses.
-- O status `Cancelado` foi excluído.
-- A ordenação foi feita por setor, data e horas.
-- O total final do relatório é `9`.
+- [x] Executei a base da revisão sem erros.
+- [x] Montei a consulta integradora principal com todas as regras.
+- [x] Apliquei corretamente as duas regras compostas.
+- [x] Usei parênteses para controlar a precedência lógica.
+- [x] Apliquei `ORDER BY` com mais de um critério.
+- [x] Conferi se o resultado final retorna `9` linhas.
