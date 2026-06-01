@@ -46,5 +46,5 @@ Monte uma única consulta que retorne `cliente`, `cidade_entrega`, `status_pedid
 
 ## Entrega 
 
-- Arquivo SQL com a consulta via Teams, nomeado como `AT2_BD2_1B_T1_nome_sobrenome.sql`.
+- Arquivo SQL com a consulta via Teams, nomeado como `AT2_BD2_2B_T1_nome_sobrenome.sql`.
 - Evidência de execução da consulta final.
